@@ -1,6 +1,5 @@
-import { Link } from 'react-router-dom';
 import { useState } from 'react';
-import logo from './assets/logo.jpg';
+import logo from '../assets/logo.jpg';
 import {
     NavbarContainer,
     LeftContainer,
@@ -15,7 +14,7 @@ import {
     Logo,
 } from '../styles/Navbar.style';
 
-function Navbar() {
+function Navbar({ isNavbarExtend }) {
     const [extendNavBar, setExtendNavBar] = useState(false);
 
     return (
@@ -24,20 +23,23 @@ function Navbar() {
                 <NavbarInnerContainer>
                     <LeftContainer>
                         <Logo src={logo}></Logo>
-                        <NavbarBrandLink to='/'>
-                            Sushi Restaurant
-                        </NavbarBrandLink>
+                        <NavbarBrandLink to='/'>Sushi Babeo</NavbarBrandLink>
                     </LeftContainer>
 
                     <RightContainer>
                         <NavbarLinkContainer>
                             <NavbarLink to='/'>Home</NavbarLink>
                             <NavbarLink to='/menu'>Menu</NavbarLink>
+                            <NavbarLink to='/reservations'>
+                                Reservations
+                            </NavbarLink>
                             <NavbarLink to='/about'>About</NavbarLink>
                             <NavbarLink to='/contact'>Contact</NavbarLink>
                             <OpenLinksButton
                                 onClick={() => {
-                                    setExtendNavBar((curr) => !curr);
+                                    const status = (curr) => !curr;
+                                    setExtendNavBar(status);
+                                    isNavbarExtend(status);
                                 }}
                             >
                                 {extendNavBar ? <>&#10005;</> : <>&#8801;</>}
@@ -50,6 +52,9 @@ function Navbar() {
                     <NavbarExtendContainer>
                         <NavbarLinkExtended to='/'>Home</NavbarLinkExtended>
                         <NavbarLinkExtended to='/menu'>Menu</NavbarLinkExtended>
+                        <NavbarLinkExtended to='/reservations'>
+                            Reservations
+                        </NavbarLinkExtended>
                         <NavbarLinkExtended to='/about'>
                             About
                         </NavbarLinkExtended>
