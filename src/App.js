@@ -18,12 +18,11 @@ function App() {
                 <Routes>
                     <Route
                         path='/'
-                        element={
-                            <>
-                                <Home navbarExtended={navbarExtended} />
-                                <Reservation />
-                            </>
-                        }
+                        element={<Home navbarExtended={navbarExtended} />}
+                    ></Route>
+                    <Route
+                        path='/reservation'
+                        element={<Reservation />}
                     ></Route>
                     <Route path='/about' element={<AboutPage />}></Route>
                     <Route path='/contact' element={<Contact />}></Route>

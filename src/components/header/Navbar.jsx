@@ -18,7 +18,7 @@ function Navbar({ isNavbarExtend }) {
     const [extendNavBar, setExtendNavBar] = useState(false);
 
     return (
-        <>
+        <div style={{ height: '13vh' }}>
             <NavbarContainer extendNavBar={extendNavBar}>
                 <NavbarInnerContainer>
                     <LeftContainer>
@@ -29,8 +29,8 @@ function Navbar({ isNavbarExtend }) {
                     <RightContainer>
                         <NavbarLinkContainer>
                             <NavbarLink to='/'>Home</NavbarLink>
-                            <NavbarLink to='/menu'>Menu</NavbarLink>
-                            <NavbarLink to='/reservations'>
+
+                            <NavbarLink to='/reservation'>
                                 Reservations
                             </NavbarLink>
                             <NavbarLink to='/about'>About</NavbarLink>
@@ -51,8 +51,8 @@ function Navbar({ isNavbarExtend }) {
                 {extendNavBar && (
                     <NavbarExtendContainer>
                         <NavbarLinkExtended to='/'>Home</NavbarLinkExtended>
-                        <NavbarLinkExtended to='/menu'>Menu</NavbarLinkExtended>
-                        <NavbarLinkExtended to='/reservations'>
+
+                        <NavbarLinkExtended to='/reservation'>
                             Reservations
                         </NavbarLinkExtended>
                         <NavbarLinkExtended to='/about'>
@@ -64,7 +64,7 @@ function Navbar({ isNavbarExtend }) {
                     </NavbarExtendContainer>
                 )}
             </NavbarContainer>
-        </>
+        </div>
     );
 }
 

@@ -3,13 +3,13 @@ import { Link } from 'react-router-dom';
 
 export const NavbarContainer = styled.nav`
     width: 100%;
-    height: ${(props) => (props.extendNavBar ? '100vh' : '80px')};
+    height: ${(props) => (props.extendNavBar ? '100vh' : '13vh')};
     background: #21243d;
     display: flex;
     flex-direction: column;
 
     @media (min-width: 700px) {
-        height: 80px;
+        height: 13vh;
     }
 `;
 

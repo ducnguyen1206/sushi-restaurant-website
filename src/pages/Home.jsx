@@ -6,8 +6,7 @@ function Home({ navbarExtended }) {
         backgroundImage: `url(${background})`,
         backgroundRepeat: 'no-repeat',
         backgroundSize: 'cover',
-        width: '100%',
-        height: '100vh',
+        height: '87vh',
         display: 'block',
         backgroundPosition: 'center',
     };
