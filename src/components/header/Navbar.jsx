@@ -23,7 +23,9 @@ function Navbar({ isNavbarExtend }) {
                 <NavbarInnerContainer>
                     <LeftContainer>
                         <Logo src={logo}></Logo>
-                        <NavbarBrandLink to='/'>Sushi Babeo</NavbarBrandLink>
+                        <NavbarBrandLink to='/'>
+                            Sushi Tuyenbeoo
+                        </NavbarBrandLink>
                     </LeftContainer>
 
                     <RightContainer>

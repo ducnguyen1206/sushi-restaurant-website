@@ -1,9 +1,9 @@
-import BookingForm from '../components/body/BookingForm';
+import ReservationForm from '../components/body/ReservationForm';
 
 function Reservation() {
     return (
         <>
-            <BookingForm />
+            <ReservationForm />
         </>
     );
 }

@@ -65,12 +65,19 @@ export const NavbarBrandLink = styled(Link)`
     font-weight: bold;
     text-decoration: none;
     margin: 10px;
+    @media (max-width: 700px) {
+        font-size: 20px;
+    }
 `;
 
 export const Logo = styled.img`
     width: 46px;
     height: 46px;
     margin-right: 1px;
+    @media (max-width: 700px) {
+        width: 36px;
+        height: 36px;
+    }
 `;
 
 export const OpenLinksButton = styled.button`

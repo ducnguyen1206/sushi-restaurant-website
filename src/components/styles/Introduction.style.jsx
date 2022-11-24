@@ -6,7 +6,7 @@ export const Container = styled.div`
     text-align: left;
     position: absolute;
     top: 40%;
-    transform: translate(0, -50%);
+    transform: translate(0, -40%);
     padding-left: 20px;
     width: 50%;
     @media (max-height: 400px) {
@@ -16,14 +16,14 @@ export const Container = styled.div`
 
 export const Title = styled.h1`
     color: white;
-    font-size: 90px;
+    font-size: 80px;
     font-family: 'Arial';
     font-weight: bold;
-    margin: 10px;
+    margin: 30px;
     transform: translate(-7px, 10%);
 
     @media (max-width: 700px) {
-        font-size: 110px;
+        font-size: 90px;
         transform: translate(-7px, 0%);
     }
 
@@ -37,7 +37,7 @@ export const SubTitle = styled.div`
     color: white;
     font-size: 30px;
     font-family: 'Arial';
-    margin: 10px;
+    margin: 30px;
     width: 90%;
     text-align: justify;
 
@@ -60,7 +60,7 @@ export const Button = styled.button`
     border: none;
     background-color: #21243d;
     color: white;
-
+    margin-left: 30px;
     @media (max-height: 400px) {
         width: 120px;
         height: 30px;
