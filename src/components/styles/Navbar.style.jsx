@@ -19,6 +19,9 @@ export const LeftContainer = styled.div`
     align-items: center;
     justify-content: flex-start;
     padding-left: 10px;
+    @media (max-width: 700px) {
+        padding-bottom: 10px;
+    }
 `;
 
 export const RightContainer = styled.div`
@@ -27,6 +30,9 @@ export const RightContainer = styled.div`
     align-items: center;
     justify-content: flex-end;
     padding-right: 30px;
+    @media (max-width: 700px) {
+        padding-bottom: 50px;
+    }
 `;
 
 export const NavbarInnerContainer = styled.div`
@@ -65,8 +71,8 @@ export const NavbarBrandLink = styled(Link)`
     font-weight: bold;
     text-decoration: none;
     margin: 10px;
-    @media (max-width: 700px) {
-        font-size: 20px;
+    @media (max-width: 800px) {
+        font-size: 25px;
     }
 `;
 

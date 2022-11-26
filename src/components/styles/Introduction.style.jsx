@@ -1,7 +1,8 @@
 import styled from 'styled-components';
+import background from '../assets/backround.png';
 
 export const Container = styled.div`
-    display: ${(props) => (props.isUpdate ? 'none' : 'block')};
+    display: ${(props) => (props.extendNavBar ? 'none' : 'block')};
     float: left;
     text-align: left;
     position: absolute;
@@ -10,7 +11,11 @@ export const Container = styled.div`
     padding-left: 20px;
     width: 50%;
     @media (max-height: 400px) {
-        transform: translate(-7px, -20%);
+        transform: translate(-7px, -10%);
+    }
+
+    @media (max-width: 800px) {
+        transform: translate(-25px, -30%);
     }
 `;
 
@@ -22,8 +27,7 @@ export const Title = styled.h1`
     margin: 30px;
     transform: translate(-7px, 10%);
 
-    @media (max-width: 700px) {
-        font-size: 90px;
+    @media (max-width: 800px) {
         transform: translate(-7px, 0%);
     }
 
@@ -41,7 +45,7 @@ export const SubTitle = styled.div`
     width: 90%;
     text-align: justify;
 
-    @media (max-width: 700px) {
+    @media (max-width: 950px) {
         display: none;
     }
 
@@ -66,4 +70,13 @@ export const Button = styled.button`
         height: 30px;
         font-size: 15px;
     }
+`;
+
+export const IntroBackground = styled.div`
+    background-image: url(${background});
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 90vh;
+    display: block;
+    background-position: center;
 `;

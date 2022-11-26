@@ -1,5 +1,4 @@
-import { createContext } from 'react';
-import { useState } from 'react';
+import { createContext, useState } from 'react';
 
 const AppContext = createContext();
 
@@ -10,11 +9,12 @@ export const AppProvider = ({ children }) => {
         setExtendedNavbar(isUpdate);
     };
 
-    return (
-        <AppContext.Provider value={(extendedNavbar, extendOnclick)}>
-            {children}
-        </AppContext.Provider>
-    );
+    const value = {
+        extendedNavbar,
+        extendOnclick,
+    };
+
+    return <AppContext.Provider value={value}>{children}</AppContext.Provider>;
 };
 
 export default AppContext;

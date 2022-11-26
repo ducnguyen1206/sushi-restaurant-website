@@ -9,16 +9,17 @@ export const Booking = styled.div`
         right: 0;
         bottom: 0;
         top: 0;
-        background: rgba(243, 176, 176, 0.774);
+        background: rgba(221, 225, 230, 0.315);
     }
-
-    font-family: Arial, Helvetica, sans-serif;
     background-image: url(${bookingImg});
     background-size: cover;
     background-position: center;
     position: relative;
-    width: 100%;
+    width: 100vw;
     height: 87vh;
+    @media (max-width: 700px) {
+        height: 87vh;
+    }
 `;
 
 export const SectionCenter = styled.div`
@@ -26,20 +27,33 @@ export const SectionCenter = styled.div`
     top: 50%;
     left: 0;
     right: 0;
-    -webkit-transform: translateY(-50%);
-    transform: translate(5%, -55%);
-    width: 80%;
-`;
-
-export const BookingCTA = styled.div`
-    margin-top: 80px;
-    margin-bottom: 30px;
+    transform: translate(50%, -50%);
+    width: 50vw;
+    @media (max-width: 700px) {
+        top: 30%;
+        width: 80vw;
+        height: 20vh;
+        transform: translate(15%, -35%);
+    }
 `;
 
 export const FormBackground = styled.div`
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
     background-color: #fff;
-    padding: 50px 20px;
+    padding: 20px 20px;
     -webkit-box-shadow: 0px 5px 20px -5px rgba(0, 0, 0, 0.3);
     box-shadow: 0px 5px 20px -5px rgba(0, 0, 0, 0.3);
     border-radius: 4px;
+    @media (max-width: 700px) {
+        padding: 10px 10px;
+        font-size: 13px;
+        transform: translate(-10%, -20%);
+    }
+`;
+
+export const FormTitle = styled.div`
+    text-align: center;
+    font-size: 16px;
+    margin-block-end: 10px;
 `;

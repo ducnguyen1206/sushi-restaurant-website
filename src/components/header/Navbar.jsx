@@ -1,5 +1,6 @@
-import { useState } from 'react';
+import { useState, useContext } from 'react';
 import logo from '../assets/logo.jpg';
+import AppContext from '../../context/AppContext';
 import {
     NavbarContainer,
     LeftContainer,
@@ -14,11 +15,12 @@ import {
     Logo,
 } from '../styles/Navbar.style';
 
-function Navbar({ isNavbarExtend }) {
+function Navbar() {
     const [extendNavBar, setExtendNavBar] = useState(false);
+    const context = useContext(AppContext);
 
     return (
-        <div style={{ height: '13vh' }}>
+        <div>
             <NavbarContainer extendNavBar={extendNavBar}>
                 <NavbarInnerContainer>
                     <LeftContainer>
@@ -41,7 +43,7 @@ function Navbar({ isNavbarExtend }) {
                                 onClick={() => {
                                     const status = (curr) => !curr;
                                     setExtendNavBar(status);
-                                    isNavbarExtend(status);
+                                    context.extendOnclick(status);
                                 }}
                             >
                                 {extendNavBar ? <>&#10005;</> : <>&#8801;</>}

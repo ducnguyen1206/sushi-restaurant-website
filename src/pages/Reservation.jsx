@@ -1,11 +1,7 @@
-import ReservationForm from '../components/body/ReservationForm';
+import Booking from '../components/body/reservation/Booking';
 
 function Reservation() {
-    return (
-        <>
-            <ReservationForm />
-        </>
-    );
+    return <Booking />;
 }
 
 export default Reservation;
