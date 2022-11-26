@@ -8,13 +8,17 @@ import { Form } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function Reservation() {
-    const className = 'col-md';
+    const className = 'col-sm';
 
     return (
         <Booking>
             <SectionCenter>
                 <FormBackground>
-                    <FormTitle>MAKE YOUR RESERVATION</FormTitle>
+                    <FormTitle>
+                        <h3 style={{ fontWeight: '700px' }}>
+                            MAKE YOUR RESERVATION
+                        </h3>
+                    </FormTitle>
                     <Form>
                         <div className='row'>
                             <Form.Group className='col-sm-6'>
