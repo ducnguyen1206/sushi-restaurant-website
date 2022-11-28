@@ -1,0 +1,14 @@
+{
+  "booking": [
+    {
+      "firstName": "Nguyen",
+      "lastName": "Minh Duc",
+      "email": "ducminh.nguyen@dxc.com",
+      "phoneNumber": "+84901172375",
+      "date": "2022-11-28",
+      "time": "21:03",
+      "quantity": 1,
+      "id": 1
+    }
+  ]
+}

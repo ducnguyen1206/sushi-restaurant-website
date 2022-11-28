@@ -1,6 +1,15 @@
 import styled from 'styled-components';
 import background from '../assets/backround.png';
 
+export const IntroBackground = styled.div`
+    background-image: url(${background});
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 87vh;
+    display: block;
+    background-position: center;
+`;
+
 export const Container = styled.div`
     display: ${(props) => (props.extendNavBar ? 'none' : 'block')};
     float: left;
@@ -70,13 +79,4 @@ export const Button = styled.button`
         height: 30px;
         font-size: 15px;
     }
-`;
-
-export const IntroBackground = styled.div`
-    background-image: url(${background});
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 90vh;
-    display: block;
-    background-position: center;
 `;

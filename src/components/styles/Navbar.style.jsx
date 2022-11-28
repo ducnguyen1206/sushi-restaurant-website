@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
+import { BsFillCartFill } from 'react-icons/bs';
 
 export const NavbarContainer = styled.nav`
     width: 100%;
@@ -106,3 +107,11 @@ export const NavbarExtendContainer = styled.div`
         display: none;
     } ;
 `;
+
+export const CartIcon = styled(BsFillCartFill)`
+    size: 30;
+    color: 'white';
+    margin-top: 10;
+`;
+
+

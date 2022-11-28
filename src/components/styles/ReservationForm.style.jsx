@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import bookingImg from '../assets/Booking.jpg';
 
-export const Booking = styled.div`
+export const FormBooking = styled.div`
     &::before {
         content: '';
         position: absolute;
@@ -14,27 +14,9 @@ export const Booking = styled.div`
     background-image: url(${bookingImg});
     background-size: cover;
     background-position: center;
-    position: relative;
-    width: 100vw;
-    height: 87vh;
-    @media (max-width: 700px) {
-        height: 87vh;
-    }
-`;
-
-export const SectionCenter = styled.div`
     position: absolute;
-    top: 50%;
-    left: 0;
-    right: 0;
-    transform: translate(50%, -50%);
-    width: 50vw;
-    @media (max-width: 700px) {
-        top: 30%;
-        width: 80vw;
-        height: 20vh;
-        transform: translate(15%, -35%);
-    }
+    width: 100%;
+    height: fit-content;
 `;
 
 export const FormBackground = styled.div`
@@ -42,18 +24,27 @@ export const FormBackground = styled.div`
     font-weight: bold;
     background-color: #fff;
     padding: 20px 20px;
+    width: fit-content;
+    max-height: fit-content;
     -webkit-box-shadow: 0px 5px 20px -5px rgba(0, 0, 0, 0.3);
     box-shadow: 0px 5px 20px -5px rgba(0, 0, 0, 0.3);
     border-radius: 4px;
+    transform: translate(80%, 0%);
     @media (max-width: 700px) {
         padding: 10px 10px;
         font-size: 13px;
-        transform: translate(-10%, -20%);
+        width: 70%;
+        transform: translate(20%, 0%);
     }
 `;
 
-export const FormTitle = styled.div`
+export const Title = styled.div`
     text-align: center;
     font-size: 16px;
     margin-block-end: 10px;
+`;
+
+export const ErrorMessage = styled.p`
+    font-size: 10px;
+    color: red;
 `;
